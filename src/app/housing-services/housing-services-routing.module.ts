@@ -12,22 +12,22 @@ import { ComunStatisticsComponent } from './comun-statistics/comun-statistics.co
 const routes: Routes = [
   {
     path: 'housing-services',
-    component: HousingServicesComponent, canActivate: [CanActivateGuard],
+    component: HousingServicesComponent,
     children: [
       {
         path: 'host-comun',
-        component: HostComunComponent, canActivate: [CanActivateGuard],
+        component: HostComunComponent,
 
         children: [
           { path: '', redirectTo: 'comun-company', pathMatch: 'full' },
-          { path: 'payment-history', component: PaymentHistoryComponent, data: { animation: 'payment-history' }, canActivate: [CanActivateGuard] },
-          { path: 'comun-statistics', component: ComunStatisticsComponent, data: { animation: 'comun-statistics' }, canActivate: [CanActivateGuard] },
+          { path: 'payment-history', component: PaymentHistoryComponent, data: { animation: 'payment-history' },},
+          { path: 'comun-statistics', component: ComunStatisticsComponent, data: { animation: 'comun-statistics' },},
           {
-            path: 'comun-company', component: ComunCompanyComponent, canActivate: [CanActivateGuard],
+            path: 'comun-company', component: ComunCompanyComponent,
             children: [
               { path: '', redirectTo: 'eng-cabinet', pathMatch: 'full' },
-              { path: 'service-profile', component: ServiceProfileComponent, data: { animation: 'service-profile' }, canActivate: [CanActivateGuard] },
-              { path: 'eng-cabinet', component: EngCabinetComponent, data: { animation: 'eng-cabinet' }, canActivate: [CanActivateGuard] },
+              { path: 'service-profile', component: ServiceProfileComponent, data: { animation: 'service-profile' },},
+              { path: 'eng-cabinet', component: EngCabinetComponent, data: { animation: 'eng-cabinet' },},
             ]
           },
         ]

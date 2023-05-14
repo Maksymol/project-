@@ -14,22 +14,22 @@ import { AccessComponent } from './house/access/access.component';
 const routes: Routes = [
   {
     path: '',
-    component: AccountComponent, canActivate: [CanActivateGuard],
+    component: AccountComponent,
     children: [
       { path: '', redirectTo: 'house', pathMatch: 'full' },
       {
-        path: 'house', component: HouseComponent, canActivate: [CanActivateGuard],
+        path: 'house', component: HouseComponent,
         children: [
           { path: '', redirectTo: 'parameters', pathMatch: 'full' },
-          { path: 'parameters', component: ParametersComponent, canActivate: [CanActivateGuard] },
-          { path: 'subscribers', component: SubscribersComponent, canActivate: [CanActivateGuard] },
-          { path: 'documents', component: DocumentsComponent, canActivate: [CanActivateGuard] },
-          { path: 'order-services', component: OrderServicesComponent, canActivate: [CanActivateGuard] },
-          { path: 'furniture', component: FurnitureComponent, canActivate: [CanActivateGuard] },
-          { path: 'access', component: AccessComponent, canActivate: [CanActivateGuard] },
+          { path: 'parameters', component: ParametersComponent,},
+          { path: 'subscribers', component: SubscribersComponent,},
+          { path: 'documents', component: DocumentsComponent,},
+          { path: 'order-services', component: OrderServicesComponent,},
+          { path: 'furniture', component: FurnitureComponent,},
+          { path: 'access', component: AccessComponent,},
         ],
       },
-      { path: 'user', component: UserComponent, canActivate: [CanActivateGuard] },
+      { path: 'user', component: UserComponent,},
     ],
   }
 ];
