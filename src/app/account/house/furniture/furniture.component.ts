@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
 
-
+interface FurnInfo {
+furnit: any;
+furniture :boolean;
+}
 @Component({
   selector: 'app-furniture',
   templateUrl: './furniture.component.html',
@@ -16,5 +19,6 @@ import { animate, style, transition, trigger } from '@angular/animations';
   ]
 })
 export class FurnitureComponent {
+
 
 }
